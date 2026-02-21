@@ -1,0 +1,55 @@
+# Dependencias
+node_modules
+.pnpm-store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Archivos de compilación / distribución
+dist
+dist-ssr
+*.local
+
+# Archivos de entorno (¡IMPORTANTE! para mantener seguras las claves/API)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Caché y archivos de herramientas
+.temp
+.cache
+.vite-stats
+.vite-cache  # Añadido: caché específico de Vite
+.vercel
+.netlify
+.history
+# TypeScript
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+node_modules/.tmp/ # Añadido: carpeta temporal usada por TypeScript y Vite
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+logs
+*.log
+
+# Testing (por si añades tests en el futuro)
+coverage
+.nyc_output
+
+# Sentry (herramienta de monitoreo de errores)
+.sentryclirc

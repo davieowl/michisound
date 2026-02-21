@@ -1,0 +1,61 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg-primary: #0a0a0f;
+    --color-bg-secondary: #14141f;
+    --color-accent-primary: #00f0ff;
+    --color-accent-secondary: #ff00aa;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #a0a0b0;
+  }
+
+  body {
+    @apply bg-[#0a0a0f] text-white;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+}
+
+@layer components {
+  .glow-text {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+  }
+
+  .pad-base {
+    @apply w-10 h-10 rounded-xl bg-[#14141f] border border-[#2a2a3a] transition-all duration-75 ease-in-out;
+  }
+
+  .pad-active {
+    @apply bg-[#00f0ff] border-[#00f0ff] glow-border;
+  }
+
+  .pad-current-col {
+    @apply border-l-2 border-r-2 border-[#00f0ff] glow-border;
+    /* Esta clase se aplicará al contenedor de la columna, no a los pads individuales */
+  }
+
+  .btn-primary {
+    @apply px-6 py-2 rounded-full bg-[#00f0ff] text-black font-bold 
+           hover:bg-[#80f5ff] transition-all duration-200 
+           disabled:opacity-50 disabled:cursor-not-allowed
+           shadow-lg shadow-[#00f0ff]/20;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-1 rounded-full bg-[#1a1a2a] border border-[#2a2a3a] 
+           hover:bg-[#2a2a3a] transition-all duration-200;
+  }
+
+  .btn-record {
+     @apply px-4 py-2 rounded-full bg-[#ff00aa] text-white font-bold 
+           hover:bg-[#ff4dc4] transition-all duration-200
+           shadow-lg shadow-[#ff00aa]/20;
+  }
+}
